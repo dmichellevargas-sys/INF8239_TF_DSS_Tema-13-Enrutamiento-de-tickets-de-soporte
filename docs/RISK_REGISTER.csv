@@ -1,0 +1,9 @@
+id,riesgo,afectados,probabilidad_1_4,impacto_1_4,control,evidencia,residual
+R01,Ticket de prioridad alta sugerido como baja (atención tardía de una caída o incidente de seguridad),Clientes con incidentes graves,2,4,Reglas que solo suben prioridad; métrica high_to_low_rate en puertas,results.json dss_test,medio
+R02,Colas pequeñas casi nunca propuestas (HR; Sales; General Inquiry),Clientes de esas colas,4,3,Top-3 y triaje manual; alternativa M2 balanceada documentada,by_queue.csv,alto
+R03,Tickets en alemán reciben menos apoyo (más triaje manual; menos sugerencias),Clientes germanohablantes y su equipo,3,2,Auditoría por idioma detectado; puerta de brecha de idioma,by_language_detected.csv,medio
+R04,Sesgo de automatización: la persona acepta la sugerencia sin leer,Clientes y coordinador,3,3,No hay modo automático; motivo obligatorio al cambiar; revisión de tasa de cambios,app/streamlit_app.py,medio
+R05,Ruido de etiquetas del dataset limita y distorsiona la evaluación,Todos,4,2,Se declara el techo; lectura de errores; no se presentan cifras como desempeño real,error_sample_30.csv,medio
+R06,Uso con tickets reales o datos de una organización (incluido el empleador),Personas reales,1,4,Prohibición en dss.yml; prueba que solo admite el dataset público; advertencia en la app,tests/test_data_contract.py,bajo
+R07,Versión distinta del dataset en origen cambia los resultados,Reproducibilidad,2,2,Verificación SHA-256 obligatoria,scripts/download_data.py,bajo
+R08,Etiqueta de idioma errónea oculta brechas reales,Auditoría,3,2,Idioma detectado en el texto para auditar,audit_summary.json,bajo

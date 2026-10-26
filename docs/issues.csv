@@ -1,0 +1,15 @@
+semana,titulo,criterio_de_aceptacion,evidencia,rama
+1,Definir problema; decisor y alcance (Modalidad A),dss.yml con propósito; decisor y usos prohibidos; DECISIONS.md con las primeras decisiones,configs/dss.yml; docs/DECISIONS.md,feat/alcance
+1,Descarga verificada del dataset público,download_data.py descarga y verifica SHA-256; falla si el hash no coincide,scripts/download_data.py; test_download_rejects_file_with_unexpected_hash,feat/datos-descarga
+1,Registro inicial de riesgos,RISK_REGISTER.csv con al menos 6 riesgos; control y evidencia,docs/RISK_REGISTER.csv,docs/riesgos
+2,Contrato de datos y auditoría,validate rechaza columnas y valores no documentados; audit_summary.json y fig_audit.png generados,src/tickets_dss/data.py; scripts/audit_data.py; tests/test_data_contract.py,feat/auditoria
+2,Partición sin fuga ni casi duplicados,split.json con casi duplicados eliminados; prueba de disjunción,tests/test_data_contract.py::test_split...,feat/particion
+2,Líneas base B0 y B1,validation_models.csv con dummy y NB,reports/validation_models.csv,feat/lineas-base
+3,Modelo candidato y selección en validación,regla de selección aplicada; C elegido en validación,src/tickets_dss/models.py; validation_models.csv,feat/candidato
+3,Análisis de errores,error_sample_30.csv leído y categorizado; top_confusions.csv,reports/error_sample_30.csv,feat/errores
+4,Artefacto práctico: abstención y prioridad con reglas,umbrales calibrados en validación; reglas solo suben prioridad; pruebas en verde,src/tickets_dss/dss.py; tests/test_models_dss.py,feat/dss
+4,Aplicación Streamlit con registro de decisiones,la app muestra modo; opciones; explicación; exige motivo al cambiar,app/streamlit_app.py,feat/app
+5,Auditoría por subgrupos y Green AI,by_language_detected.csv; by_queue.csv; tiempos; tamaño y latencia,reports/,feat/auditoria-responsable
+5,Model Card; ficha del artefacto y Dataset Card,fichas completas y sección automática actualizada,docs/,docs/fichas
+5,CI en GitHub Actions,ruff y pytest pasan en cada push,.github/workflows/ci.yml,ci/actions
+6,Notebook ejecutado; informe; declaración de IA y ensayo de demostración,notebook sin errores; informe PDF con enlace; AI_USE completo,notebooks/; docs/AI_USE_DECLARATION.md,docs/entrega

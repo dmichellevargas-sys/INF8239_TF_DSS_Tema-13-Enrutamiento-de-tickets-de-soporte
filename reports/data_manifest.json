@@ -1,0 +1,7 @@
+{
+  "source": "Hugging Face \u00b7 Tobi-Bueck/customer-support-tickets",
+  "url": "https://huggingface.co/datasets/Tobi-Bueck/customer-support-tickets/resolve/main/dataset-tickets-multi-lang-4-20k.csv",
+  "license": "CC BY-NC 4.0",
+  "file": "25e91530-dataset-tickets-multi-lang-4-20k.csv",
+  "sha256": "9be3bf810584fe01e8e83383e83dfd33f4c3910938ecad03ef151da79d8f0635"
+}

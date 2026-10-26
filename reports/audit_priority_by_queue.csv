@@ -1,0 +1,11 @@
+queue,high,low,medium
+Technical Support,0.584,0.123,0.294
+Product Support,0.313,0.191,0.496
+Customer Service,0.188,0.307,0.505
+IT Support,0.484,0.101,0.415
+Billing and Payments,0.284,0.218,0.498
+Returns and Exchanges,0.222,0.353,0.426
+Service Outages and Maintenance,0.705,0.122,0.173
+Sales and Pre-Sales,0.182,0.358,0.46
+Human Resources,0.118,0.456,0.426
+General Inquiry,0.16,0.658,0.183

@@ -1,0 +1,9 @@
+{
+  "removed_near_dup_valid": 104,
+  "near_dup_label_conflicts_valid": 0,
+  "removed_near_dup_test": 99,
+  "near_dup_label_conflicts_test": 1,
+  "train": 13999,
+  "valid": 2896,
+  "test": 2901
+}

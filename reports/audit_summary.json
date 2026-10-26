@@ -1,0 +1,77 @@
+{
+  "rows_raw": 20000,
+  "rows_after_cleaning": 19999,
+  "columns": [
+    "subject",
+    "body",
+    "answer",
+    "type",
+    "queue",
+    "priority",
+    "language",
+    "tag_1",
+    "tag_2",
+    "tag_3",
+    "tag_4",
+    "tag_5",
+    "tag_6",
+    "tag_7",
+    "tag_8"
+  ],
+  "nulls": {
+    "subject": 1461,
+    "body": 2,
+    "answer": 4,
+    "tag_2": 46,
+    "tag_3": 95,
+    "tag_4": 1539,
+    "tag_5": 6909,
+    "tag_6": 12649,
+    "tag_7": 16072,
+    "tag_8": 18093
+  },
+  "removed_empty_or_duplicate_text": 1,
+  "queue": {
+    "Technical Support": 5824,
+    "Product Support": 3708,
+    "Customer Service": 3152,
+    "IT Support": 2292,
+    "Billing and Payments": 2085,
+    "Returns and Exchanges": 1001,
+    "Service Outages and Maintenance": 764,
+    "Sales and Pre-Sales": 572,
+    "Human Resources": 338,
+    "General Inquiry": 263
+  },
+  "priority": {
+    "medium": 8143,
+    "high": 7801,
+    "low": 4055
+  },
+  "language": {
+    "en": 11922,
+    "de": 8077
+  },
+  "type": {
+    "Incident": 7978,
+    "Request": 5762,
+    "Problem": 4184,
+    "Change": 2075
+  },
+  "median_words_by_language": {
+    "de": 55.0,
+    "en": 58.0
+  },
+  "smallest_queue_share": 0.013150657532876643,
+  "post_triage_fields_accuracy": {
+    "tags_y_tipo": 0.39275,
+    "respuesta_agente": 0.40875
+  },
+  "majority_class_accuracy": 0.2912145607280364,
+  "language_label_vs_detected": {
+    "de->de": 5966,
+    "de->en": 2111,
+    "en->de": 3,
+    "en->en": 11919
+  }
+}

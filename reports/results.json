@@ -1,0 +1,129 @@
+{
+  "candidate": "logreg_C2",
+  "selection_rule": "mayor top-3 en validación; empate < 1 punto → menor tiempo",
+  "split": {
+    "removed_near_dup_valid": 104,
+    "near_dup_label_conflicts_valid": 0,
+    "removed_near_dup_test": 99,
+    "near_dup_label_conflicts_test": 1,
+    "train": 13999,
+    "valid": 2896,
+    "test": 2901
+  },
+  "thresholds": {
+    "t_strong": 0.5612247858109364,
+    "t_top3": 0.7208734856007891,
+    "strong_target": 0.75,
+    "top3_target": 0.85,
+    "min_support": 200
+  },
+  "dss_valid": {
+    "n": 2896,
+    "share_sugerencia": 0.1643646408839779,
+    "accuracy_sugerencia": 0.75,
+    "share_top3": 0.42092541436464087,
+    "hit_top3_mode": 0.8244462674323215,
+    "share_triaje_manual": 0.41470994475138123,
+    "correct_option_available": 0.8850138121546961,
+    "high_to_low_rate_model": 0.04719501335707925,
+    "high_to_low_rate_dss": 0.04452359750667854,
+    "high_recall_model": 0.6010685663401603,
+    "high_recall_dss": 0.6402493321460374,
+    "priority_accuracy_model": 0.5400552486187845,
+    "priority_accuracy_dss": 0.5269337016574586,
+    "rules_fire_rate": 0.13535911602209943
+  },
+  "dss_test": {
+    "n": 2901,
+    "share_sugerencia": 0.15305067218200621,
+    "accuracy_sugerencia": 0.7477477477477478,
+    "share_top3": 0.432609445018959,
+    "hit_top3_mode": 0.8334661354581673,
+    "share_triaje_manual": 0.41433988279903483,
+    "correct_option_available": 0.889348500517063,
+    "high_to_low_rate_model": 0.0338680926916221,
+    "high_to_low_rate_dss": 0.030303030303030304,
+    "high_recall_model": 0.5962566844919787,
+    "high_recall_dss": 0.6470588235294118,
+    "priority_accuracy_model": 0.520854877628404,
+    "priority_accuracy_dss": 0.5143054119269217,
+    "rules_fire_rate": 0.1368493622888659
+  },
+  "dss_test_by_language": {
+    "en": {
+      "n": 1693,
+      "share_sugerencia": 0.18487891317188423,
+      "accuracy_sugerencia": 0.7731629392971247,
+      "share_top3": 0.464264619019492,
+      "hit_top3_mode": 0.8473282442748091,
+      "share_triaje_manual": 0.35085646780862373,
+      "correct_option_available": 0.887182516243355,
+      "high_to_low_rate_model": 0.03323262839879154,
+      "high_to_low_rate_dss": 0.028700906344410877,
+      "high_recall_model": 0.5830815709969789,
+      "high_recall_dss": 0.6540785498489426,
+      "priority_accuracy_model": 0.5505020673360898,
+      "priority_accuracy_dss": 0.5434140578854105,
+      "rules_fire_rate": 0.16834022445363261
+    },
+    "de": {
+      "n": 1208,
+      "share_sugerencia": 0.10844370860927152,
+      "accuracy_sugerencia": 0.6870229007633588,
+      "share_top3": 0.3882450331125828,
+      "hit_top3_mode": 0.8102345415778252,
+      "share_triaje_manual": 0.5033112582781457,
+      "correct_option_available": 0.8923841059602649,
+      "high_to_low_rate_model": 0.034782608695652174,
+      "high_to_low_rate_dss": 0.03260869565217391,
+      "high_recall_model": 0.6152173913043478,
+      "high_recall_dss": 0.6369565217391304,
+      "priority_accuracy_model": 0.4793046357615894,
+      "priority_accuracy_dss": 0.4735099337748344,
+      "rules_fire_rate": 0.09271523178807947
+    }
+  },
+  "language_gap_ci95": {
+    "top3_en_minus_de": [
+      0.02232377035553483,
+      0.08381334028312921
+    ],
+    "acc_en_minus_de": [
+      0.02799153751520676,
+      0.09916213723825802
+    ],
+    "top3_detected_en_minus_de": [
+      0.035414912584815016,
+      0.10305639476334344
+    ]
+  },
+  "mcnemar_nb_vs_candidate": {
+    "only_a": 224,
+    "only_b": 257,
+    "p_value": 0.14446615420739686
+  },
+  "macro_recall_top3_by_queue": {
+    "dummy": 0.3,
+    "nb": 0.6628632255441461,
+    "logreg_C2": 0.5300667252200796,
+    "logreg_C5_bal": 0.6698128557411261
+  },
+  "priority_model_train_seconds": 7.691400950999991,
+  "gates": {
+    "top3_accuracy": false,
+    "language_gap_top3": true,
+    "language_gap_top3_detected": true,
+    "high_to_low_rate": true,
+    "latency": true,
+    "model_size": true
+  },
+  "gates_status": "REVISAR",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "scikit_learn": "1.9.1",
+    "pandas": "2.3.3",
+    "numpy": "2.5.3"
+  }
+}

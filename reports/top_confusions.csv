@@ -1,0 +1,9 @@
+real,predicha,errores,% de la cola real
+Product Support,Technical Support,254,0.47388059701492535
+IT Support,Technical Support,187,0.5598802395209581
+Customer Service,Technical Support,171,0.37093275488069416
+Technical Support,Product Support,97,0.11479289940828402
+Customer Service,Product Support,81,0.175704989154013
+Technical Support,Customer Service,79,0.09349112426035502
+Product Support,Customer Service,76,0.1417910447761194
+Returns and Exchanges,Technical Support,63,0.42567567567567566

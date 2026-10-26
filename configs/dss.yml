@@ -1,0 +1,41 @@
+# Configuración del DSS de enrutamiento. Los valores marcados como PROPUESTA son decisiones de
+# valor que la estudiante debe ratificar o cambiar (y justificar) antes de la entrega.
+system_name: "Ticket Routing DSS (académico)"
+purpose: "Sugerir a una persona coordinadora de mesa de ayuda la cola y la prioridad de cada ticket entrante; la persona decide."
+decision_maker: "Coordinador/a de triaje de la mesa de ayuda"
+prohibited_uses:
+  - "Enrutamiento automático sin confirmación humana"
+  - "Evaluar el desempeño de agentes o clientes"
+  - "Usar datos de cualquier organización real (incluido el empleador de la estudiante)"
+  - "Cargar tickets reales con datos personales en servicios públicos"
+data:
+  source: "Hugging Face · Tobi-Bueck/customer-support-tickets"
+  file: "dataset-tickets-multi-lang-4-20k.csv"
+  url: "https://huggingface.co/datasets/Tobi-Bueck/customer-support-tickets/resolve/main/dataset-tickets-multi-lang-4-20k.csv"
+  sha256: "9be3bf810584fe01e8e83383e83dfd33f4c3910938ecad03ef151da79d8f0635"
+  license: "CC BY-NC 4.0"
+split:
+  valid_fraction: 0.15
+  test_fraction: 0.15
+  near_duplicate_cosine: 0.90
+  seed: 42
+modes:                       # PROPUESTA (a ratificar)
+  strong_min_accuracy: 0.75  # modo "sugerencia": la cola top-1 se muestra preseleccionada
+  top3_min_hit: 0.85         # modo "top-3": la cola correcta debe estar entre las 3 opciones
+  min_support: 200           # casos mínimos en validación para fijar un umbral
+priority_rules:              # PROPUESTA: reglas explícitas que solo SUBEN la prioridad
+  - name: "caida_o_interrupcion"
+    level: high
+    patterns: ["outage", "down", "not working", "disruption", "ausfall", "störung", "unterbrechung"]
+  - name: "seguridad_o_datos"
+    level: high
+    patterns: ["breach", "security incident", "unauthorized", "data loss", "ransomware", "sicherheitsvorfall", "datenverlust", "unbefugt"]
+  - name: "urgencia_explicita"
+    level: high
+    patterns: ["urgent", "immediately", "asap", "critical", "dringend", "sofort", "kritisch"]
+gates:                       # PROPUESTA: puertas de calidad para pasar de piloto a uso supervisado
+  min_top3_accuracy: 0.80
+  max_language_gap_top3: 0.10
+  max_high_to_low_rate: 0.05
+  max_latency_ms: 50
+  max_model_mb: 50
